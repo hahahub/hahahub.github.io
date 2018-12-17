@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://hahahub.github.com/2018/12/17/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://hahahub.github.com/2018/12/17/zhengze/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="杨韫铭">
@@ -315,7 +315,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2018/12/17/hello-world/" class="post-title-link" itemprop="http://hahahub.github.com/index.html">Hello World</a>
+                <a href="/2018/12/17/zhengze/" class="post-title-link" itemprop="http://hahahub.github.com/index.html">正则笔记</a>
               
             
           </h1>
@@ -340,9 +340,13 @@
                 
               
 
-              <time title="创建时间：2018-12-17 14:52:30" itemprop="dateCreated datePublished" datetime="2018-12-17T14:52:30+08:00">2018-12-17</time>
+              <time title="创建时间：2018-12-17 15:20:48 / 修改时间：15:23:22" itemprop="dateCreated datePublished" datetime="2018-12-17T15:20:48+08:00">2018-12-17</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -376,15 +380,44 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h1 id="正则笔记"><a href="#正则笔记" class="headerlink" title="正则笔记"></a>正则笔记</h1><ol>
+<li>java中正则表达式由于使用字符串方式表示，那么反斜杠就要先使用双反斜杠，防止字符串将所使用的正则表达式转义，因此“\” 使用 ”\“ 表示。</li>
+<li>-? 要找一个数字，它可能有一个负号在最前面，那你就写一个负号加上一个问号</li>
+<li><ul>
+<li>表示一个或多个之前的表达式</li>
+</ul>
+</li>
+<li>（-|\+)?则表示字符串的起始字符可能是一个“-”或“+”，又因为后面有一个问号，所以可能都没有</li>
+<li>“|” 表示或</li>
+<li>XY Y跟在X后面</li>
+<li>X|Y X或Y</li>
+<li>（X）捕获组。可在表达式中用\i引用第i个捕获组</li>
+<li>^ 一行的开始</li>
+<li>$ 一行的结束</li>
+<li>\b 词的边界</li>
+<li>\B 非词的边界</li>
+<li>\G前一个匹配的结束</li>
+<li>换行符 “\n”</li>
+<li>制表符 “\t”</li>
+<li>表示一个单词字符 “\w”</li>
+<li>表示一个非单词字符 “\W”</li>
+<li>回车 “\r”</li>
+<li>换页 “\f”</li>
+<li>转义 “\e”</li>
+<li>“.”任意字符</li>
+<li>[abc] 包含abc的任意字符</li>
+<li>[^abc]除了abc的任意字符</li>
+<li>[a-zA-Z]从a-z或A-Z的任何字符</li>
+<li>[abc[hij]]任意abchij字符（合并）</li>
+<li>[a-z&amp;&amp;[hij]]任意hij（相交）</li>
+<li>\s空白符——-空格、tab、换行、换页和回车</li>
+<li>\S非空白符</li>
+<li>\d数字</li>
+<li>\D非数字</li>
+<li>{n} n是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</li>
+<li>{n,} n是一个非负整数。至少匹配n 次。例如，’o{2,}’ 不能匹配 “Bob” 中的 ‘o’，但能匹配 “foooood” 中的所有 o。’o{1,}’ 等价于 ‘o+’。’o{0,}’ 则等价于 ‘o*’。</li>
+<li>{n,m} m和n均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。例如，”o{1,3}” 将匹配 “fooooood” 中的前三个 o。’o{0,1}’ 等价于 ‘o?’。请注意在逗号和两个数之间不能有空格。</li>
+</ol>
 
           
         
@@ -477,6 +510,19 @@
 
               
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
               
             </nav>
           
