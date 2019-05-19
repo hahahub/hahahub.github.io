@@ -1,2 +1,6 @@
 # themes
 themes
+
+# deploy
+.deploy_git/
+
