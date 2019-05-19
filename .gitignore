@@ -4,3 +4,6 @@ themes
 # deploy
 .deploy_git/
 
+# JS
+node_modules
+package-lock.json
